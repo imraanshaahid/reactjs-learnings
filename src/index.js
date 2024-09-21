@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import UseContext from './UseContext';
+import Array3Example from './Array3Example';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root2'));
 root.render(
-    <UseContext />
+    <Array3Example />
   );
 
 // If you want to start measuring performance in your app, pass a function
