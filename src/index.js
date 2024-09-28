@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Array3Example from './Array3Example';
+import App from './App'
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import allReducers from './redux/reducers';
+
+
+const store = createStore(allReducers, window._REDUX_DEVTOOLS_EXTENTIONS__ && window._REDUX_DEVTOOLS_EXTENTIONS__());
 
 const root = ReactDOM.createRoot(document.getElementById('root2'));
 root.render(
-    <Array3Example />
+    <Provider store={store}>
+      <App />
+    </Provider>
   );
 
 // If you want to start measuring performance in your app, pass a function
